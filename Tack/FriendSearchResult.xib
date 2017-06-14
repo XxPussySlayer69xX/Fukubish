@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="FriendSearchResult" customModule="Tack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="372" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="showname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zb-PP-65C">
+                        <rect key="frame" x="69" y="8" width="83" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aRW-2H-FGW">
+                        <rect key="frame" x="8" y="4" width="53" height="53"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhI-6M-2Gf">
+                        <rect key="frame" x="69" y="31" width="67" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.43071859137055835" green="0.43071859137055835" blue="0.43071859137055835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLt-Ks-9UP">
+                        <rect key="frame" x="304" y="14" width="60" height="30"/>
+                        <color key="backgroundColor" red="0.38039215686274508" green="0.94901960784313721" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="zSw-0f-52k"/>
+                        </constraints>
+                        <state key="normal" title="Add">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="addFriend:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cXj-1q-4zH"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aRW-2H-FGW" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="35:59" constant="17.406779661016948" id="25I-6M-eI9"/>
+                    <constraint firstItem="7zb-PP-65C" firstAttribute="leading" secondItem="aRW-2H-FGW" secondAttribute="trailing" constant="8" id="9Wn-VU-7J2"/>
+                    <constraint firstItem="xhI-6M-2Gf" firstAttribute="leading" secondItem="aRW-2H-FGW" secondAttribute="trailing" constant="8" id="Gyb-7C-NE2"/>
+                    <constraint firstItem="7zb-PP-65C" firstAttribute="leading" secondItem="aRW-2H-FGW" secondAttribute="trailing" constant="8" id="Jgw-nF-mrJ"/>
+                    <constraint firstItem="aRW-2H-FGW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="MRa-bu-8PJ"/>
+                    <constraint firstItem="aRW-2H-FGW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Ubb-bN-nh7"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xhI-6M-2Gf" secondAttribute="bottom" constant="5" id="acQ-Eu-SpS"/>
+                    <constraint firstItem="hLt-Ks-9UP" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="eCf-cQ-xfL"/>
+                    <constraint firstItem="7zb-PP-65C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="j77-d5-rfa"/>
+                    <constraint firstItem="xhI-6M-2Gf" firstAttribute="leading" secondItem="aRW-2H-FGW" secondAttribute="trailing" constant="8" id="nVn-er-bzM"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="aRW-2H-FGW" secondAttribute="bottom" constant="-6" id="v2F-zb-dnD"/>
+                    <constraint firstItem="aRW-2H-FGW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="zvO-2G-WWG"/>
+                    <constraint firstItem="hLt-Ks-9UP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="zwx-J5-keg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="FriendButton" destination="hLt-Ks-9UP" id="DQP-Ib-8nc"/>
+                <outlet property="FriendImage" destination="aRW-2H-FGW" id="RD8-8Z-Vn8"/>
+                <outlet property="FriendShowname" destination="7zb-PP-65C" id="Mkc-kh-DNt"/>
+                <outlet property="FriendUsername" destination="xhI-6M-2Gf" id="ARK-uD-d8K"/>
+            </connections>
+            <point key="canvasLocation" x="-614" y="-69"/>
+        </tableViewCell>
+    </objects>
+</document>
